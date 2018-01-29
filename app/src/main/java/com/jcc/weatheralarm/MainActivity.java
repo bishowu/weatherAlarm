@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public AlarmViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v = View.inflate(mContext, R.layout.alarm_item, parent);
+            View v = LayoutInflater.from(mContext).inflate(R.layout.alarm_item, parent, false);
             return new AlarmViewHolder(v);
         }
 
